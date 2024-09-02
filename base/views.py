@@ -12,6 +12,7 @@ rooms = [
 ]
 
 
+
 def home(request):
     q = request.GET.get('q') if  request.GET.get('q') != None else ''
     rooms = Room.objects.filter(topic__name__icontains=q)
