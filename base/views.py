@@ -1,6 +1,9 @@
 from django.shortcuts import render, redirect
 from django.contrib import messages
+<<<<<<< HEAD
 from django.contrib.auth.decorators import login_required
+=======
+>>>>>>> b2e9291 (meassages)
 from django.http import HttpResponse
 from django.contrib.auth import authenticate, login, logout
 from .models import Room,Topic
@@ -33,6 +36,7 @@ def loginpage(request):
             user = User.objects.get(username=username)
         except:
             messages.error(request, "User does not exist.")
+<<<<<<< HEAD
         user = authenticate(request, username=username, password=password)
         if user is not None:
             login(request, user)
@@ -40,6 +44,8 @@ def loginpage(request):
         else:
             messages.error(request, "Username or password does not exist.")
 
+=======
+>>>>>>> b2e9291 (meassages)
            
             
     context = {'page':page}
